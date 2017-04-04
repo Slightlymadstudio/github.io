@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+	<html>
+
+		<head>
+			<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+			 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> 
+			<link rel="stylesheet" type="text/css" href="style1.css">
+			<link rel="stylesheet" href="normalize.css">
+            <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+			 
+  
+		</head>
+		<body>
+			
+			<div class="wrapper">
+				<div class="container">
+					<div class="row clearfix">
+                    	<a href="index.html"><div class="header">
+							<picture>
+								<source media="(min-width: 865px)" srcset="elements/newheaderalt.jpg">
+								<source media="(min-width: 465px)" srcset="elements/headershort.jpg">
+								<img src="elements/headershort.jpg">
+							</picture>
+						</div></a>
+					</div>
+                
+					<div class="row clearfix"> 
+						<div class="firstticket">
+							<p class="welcome" style="font-size: 32px; font-family: Roboto Slab;">
+								We've got you covered</p>
+							
+						</div>
+					</div>
+					
+					<div class="row clearfix">
+						<div class="secondticket">
+							<div class="column one-half">
+								<p class="welcome" style="font-size: 20px; font-family: Roboto Slab; text-align: center;">
+									Want to see individual shows? Click for single tickets
+									and choose which movie you want to see from the store.
+								</p><br>
+								<a href="single.html">
+								<picture>
+								<source media="(min-width: 860px)" srcset="elements/oneticketalt.png">
+								<source media="(min-width: 465px)" srcset="elements/otalt.png">
+								<img src="elements/otalt.png">
+								</picture></a>
+							</div>
+					
+							<div class="column one-half">
+								<p class="welcome" style="font-size: 20px; font-family: Roboto Slab; text-align: center;">
+									Looking to take in more than one flick? Get a day pass that gives you access to all of the
+									movies for that day and save!
+								</p><br>
+								<a href="daypass.html">
+								<picture>
+								<source media="(min-width: 860px)" srcset="elements/twoticketsalt.png">
+								<source media="(min-width: 465px)" srcset="elements/ttsmallalt.png">
+								<img src="elements/ttsmallalt.png"t
+								</picture></a>
+							</div>
+						</div>
+					</div>
+					
+						<div class="row clearfix"> 
+							<div class="second">
+								<div class="column one-third">
+									<a href="schedule.html">
+									<div class="button"><p class="shout">Schedule</p>
+									</div>
+									</a>
+								</div>
+						
+								<div class="column one-third">
+									<a href="directions.html">
+									<div class="button"><p class="shout">Directions</p>
+										</div>
+									</a>
+								</div>
+						
+							<div class="column one-third">
+								<a href="contact.html">
+								<div class="button"><p class="shout">Contact</p>
+								</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				
+					<div class="row clearfix"> 
+						<div class="third">
+							<div class="column one-third">
+								<p class="index">Let me take a look at those movies again</p>
+							</div>
+						
+							<div class="column one-third">
+								<p class="index">Three unique venues! <br>Don't get lost.</p>
+							</div>
+						
+							<div class="column one-third">
+								<p class="index">Have a submission? <br>Enter it here!</p>
+							</div>
+						</div>
+					</div>
+						
+						
+					<div class="row clearfix">
+						<div class="footer">
+							<picture>
+								<source media="(min-width: 865px)" srcset="elements/footer.jpg">
+								<source media="(min-width: 465px)" srcset="elements/footershort.jpg">
+								<img src="elements/footershort.jpg">
+							</picture>
+						</div>
+					</div>
+			        
+			</div>
+		</div>
+					
+	<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+	showDivs(slideIndex += n);
+  
+	}
+
+	function currentDiv(n) {
+    showDivs(slideIndex = n);
+
+	}	
+
+	function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+     
+    }
+    for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    x[slideIndex-1].style.display = "block";  
+   dots[slideIndex-1].className += " w3-white";
+  
+    }
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);
+	}
+	</script>
+						
+	
+	</html>

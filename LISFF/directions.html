@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+	<html>
+
+		<head>
+			<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+			 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> 
+			<link rel="stylesheet" type="text/css" href="style1.css">
+			<link rel="stylesheet" href="normalize.css">
+            <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+			 
+  
+		</head>
+		<body>
+			
+			<div class="wrapper">
+				<div class="container">
+					<div class="row clearfix">
+                    	<a href="index.html"><div class="header">
+							<picture>
+								<source media="(min-width: 865px)" srcset="elements/newheaderalt.jpg">
+								<source media="(min-width: 465px)" srcset="elements/headershort.jpg">
+								<img src="elements/headershort.jpg">
+							</picture>
+						</div></a>
+					</div>
+                
+					<div class="row clearfix"> 
+						<div class="firstticket">
+							<p class="welcome" style="font-size: 32px; font-family: Roboto Slab;">
+								Our three venues</p>
+							
+						</div>
+					</div>
+					
+					<div class="row clearfix">
+						<div class="forth">
+							<img src="elements/lancaster.jpg">
+						</div>
+					</div>
+					
+					<div class="row clearfix"> 
+						<div class="directionsfirst">
+							<div class="column one-third">
+								<p class="welcome" style="font-size: 28px; font-family: Roboto Slab;">1. <br> <a href="https://www.google.com/maps/place/Zoetropolis+Art+House/@40.0455261,-76.3145697,536m/data=!3m2!1e3!4b1!4m5!3m4!1s0x89c6248b9b5654c3:0x96ecb407d5e341c6!8m2!3d40.045522!4d-76.312381">
+								The Elks Club<br><br></p></a>
+								<p class="welcome" style="font-size: 18px; font-family: Roboto Slab;">219 N Duke St <br>Lancaster, PA 17602</p>
+							</div>
+						
+							<div class="column one-third">
+								<p class="welcome" style="font-size: 28px; font-family: Roboto Slab;">2. <br> <a href="https://www.google.com/maps/place/Excelsior+on+King/@40.0384061,-76.3049233,536m/data=!3m2!1e3!4b1!4m5!3m4!1s0x89c624ec527c74db:0xd5227848e0a87ccf!8m2!3d40.038402!4d-76.3027346">
+								The Excelsior Building</p></a>
+								<p class="welcome" style="font-size: 18px; font-family: Roboto Slab;"> 131 E King St <br> Lancaster, PA 17602</p>
+								<p></p>
+							</div>
+						
+							<div class="column one-third">
+								<p class="welcome" style="font-size: 28px; font-family: Roboto Slab;">3. <br> <a href="https://www.google.com/maps/place/Zoetropolis+Art+House/@40.0455261,-76.3145697,536m/data=!3m2!1e3!4b1!4m5!3m4!1s0x89c6248b9b5654c3:0x96ecb407d5e341c6!8m2!3d40.045522!4d-76.312381">
+								Zoetropolis<br><br></p></a>
+								<p class="welcome" style="font-size: 18px; font-family: Roboto Slab;">315 W James St <br> Lancaster, PA 17603</p>
+							</div>
+						</div>
+					</div>
+					
+					
+					
+						<div class="row clearfix"> 
+							<div class="second">
+								<div class="column one-third">
+									<a href="schedule.html">
+									<div class="button"><p class="shout">Schedule</p>
+									</div>
+									</a>
+								</div>
+						
+								<div class="column one-third">
+									<a href="tickets.html">
+									<div class="button"><p class="shout">Tickets</p>
+										</div>
+									</a>
+								</div>
+						
+							<div class="column one-third">
+								<a href="contact.html">
+								<div class="button"><p class="shout">Contact</p>
+								</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				
+					<div class="row clearfix"> 
+						<div class="third">
+							<div class="column one-third">
+								<p class="index">Let me take a look at those movies again</p>
+							</div>
+						
+							<div class="column one-third">
+								<p class="index">Buy day passes or individual tickets.</p>
+							</div>
+						
+							<div class="column one-third">
+								<p class="index">Have a submission? <br>Enter it here!</p>
+							</div>
+						</div>
+					</div>
+						
+						
+					<div class="row clearfix">
+						<div class="footer">
+							<picture>
+								<source media="(min-width: 865px)" srcset="elements/footer.jpg">
+								<source media="(min-width: 465px)" srcset="elements/footershort.jpg">
+								<img src="elements/footershort.jpg">
+							</picture>
+						</div>
+					</div>
+			        
+			</div>
+		</div>
+					
+	<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+	showDivs(slideIndex += n);
+  
+	}
+
+	function currentDiv(n) {
+    showDivs(slideIndex = n);
+
+	}	
+
+	function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+     
+    }
+    for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    x[slideIndex-1].style.display = "block";  
+   dots[slideIndex-1].className += " w3-white";
+  
+    }
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);
+	}
+	</script>
+						
+	
+	</html>

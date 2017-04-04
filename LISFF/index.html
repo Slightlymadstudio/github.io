@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+	<html>
+
+		<head>
+			<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+			 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> 
+			<link rel="stylesheet" type="text/css" href="style1.css">
+			<link rel="stylesheet" href="normalize.css">
+            <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+			 
+  
+		</head>
+		<body>
+			
+			<div class="wrapper">
+				<div class="container">
+					<div class="row clearfix">
+                    	<a href="index.html"><div class="header">
+							<picture>
+								<source media="(min-width: 865px)" srcset="elements/newheader.jpg">
+								<source media="(min-width: 465px)" srcset="elements/headershort.jpg">
+								<img src="elements/headershort.jpg">
+							</picture>
+							
+						</div></a>
+					</div>
+                
+					<div class="row clearfix"> 
+						<div class="first">
+							<p class="welcome" style="font-size: 32px; font-family: Roboto Slab;">Welcome to the <br>Lancaster International Film Festival!</p>
+							<p class="welcome" style="font-size: 20px; font-family: Roboto Slab;">Celebrating a variety of film genres <br>from creative movie makers the world over.</p>
+						</div>
+					</div>
+					
+					<div class="row clearfix"> 
+						<div class="second">
+							<div class="column one-third">
+								<a href="tickets.html"><div class="button"><p class="shout">Tickets</p>
+								</div></a>
+							</div>
+						
+							<div class="column one-third">
+								<a href="directions.html"><div class="button"><p class="shout">Directions</p>
+								</div></a>
+							</div>
+						
+							<div class="column one-third">
+								<a href="contact.html"><div class="button"><p class="shout">Contact</p>
+								</div></a>
+							</div>
+							
+						</div>
+					</div>
+				
+					<div class="row clearfix"> 
+						<div class="third">
+							<div class="column one-third">
+								<p class="index">Buy day passes or individual tickets.</p>
+							</div>
+						
+							<div class="column one-third">
+								<p class="index">Three unique venues! <br>Don't get lost.</p>
+							</div>
+						
+							<div class="column one-third">
+								<p class="index">Have a submission? <br>Enter it here!</p>
+							</div>
+						</div>
+					</div>
+					
+					
+				
+					<div class="row clearfix">
+						<div class="forth">
+							<div class="w3-content w3-display-container">
+								<img class="mySlides" src="elements/carousel1.jpg" style="width:100%">
+								<img class="mySlides" src="elements/carousel2.jpg" style="width:100%">
+								<img class="mySlides" src="elements/carousel3.jpg" style="width:100%">
+							<div class="w3-center w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:60%">
+								<div class="w3-left w3-padding-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;
+								</div>
+									<div class="w3-right w3-padding-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;
+									</div>
+										<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+										<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+										<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+							</div>
+							</div>
+						</div>
+					</div>
+            
+					<div class="row clearfix"> 
+						<div class="fifth">
+							<a href="schedule.html"><div class="buttonthin"><p class="top">See Full Schedule</p>
+							</div></a>
+						</div>
+					</div>
+					
+					<div class="row clearfix">
+						<div class="sixth">
+							<p class="welcome" style="font-size: 20px; font-family: Roboto Slab;">Like what you see? We have a whole lot more!</p>
+						</div>
+					</div>
+              
+						
+						
+					<div class="row clearfix">
+						<div class="footer">
+							<picture>
+								<source media="(min-width: 865px)" srcset="elements/footer.jpg">
+								<source media="(min-width: 465px)" srcset="elements/footershort.jpg">
+								<img src="elements/footershort.jpg">
+							</picture>
+						</div>
+					</div>
+			        
+			</div>
+		</div>
+					
+	<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+	showDivs(slideIndex += n);
+  
+	}
+
+	function currentDiv(n) {
+    showDivs(slideIndex = n);
+
+	}	
+
+	function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+     
+    }
+    for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    x[slideIndex-1].style.display = "block";  
+   dots[slideIndex-1].className += " w3-white";
+  
+    }
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);
+	}
+	</script>
+						
+		</body>
+	
+	</html>
